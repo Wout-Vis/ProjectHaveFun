@@ -1,55 +1,34 @@
 import React, { Component } from "react";
+import { Navbar, Nav, NavDropdown, Modal, Button } from "react-bootstrap";
+import LoginPopUP from "./LoginPopUp";
 
 class SignedOutLinks extends Component {
   render() {
     return (
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Features
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar.Brand href="/">Gogle</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#features">The vision</Nav.Link>
+            <Nav.Link href="/products">Products</Nav.Link>
+            <NavDropdown title="Our Company" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="/ceo">Meet the Ceo</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
                 Another action
-              </a>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">
-              Login
-            </a>
-          </li>
-        </ul>
-      </div>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <LoginPopUP />
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
