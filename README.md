@@ -1,3 +1,10 @@
+
+For chatbot use
+ ##npm install react-simple-chatbot styled-components --save
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
