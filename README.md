@@ -1,6 +1,12 @@
+For the tree we use some icons and symbols
+
+### npm install styled-components
+### npm install react-icons
+
+
 
 For chatbot use
- ##npm install react-simple-chatbot styled-components --save
+ ### npm install react-simple-chatbot styled-components --save
 
 
 
