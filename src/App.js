@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { browserHistory } from "react-router";
+import { browserHistory, Switch } from "react-router";
 import HomePage from "./HomePage";
-import NavBar from "./HeaderComponent/NavBar";
+import SignedOutLinks from "./HeaderComponent/SignedOutLinks";
+
+import Products from "./pageComponents/Products";
+import Ceo from "./pageComponents/Ceo";
+import Staff from "./pageComponents/Staff";
 
 import TestComponent from "./TestComponent";
-import Counter from "./NewComponent";
-import Counters from "./Counters";
+import CustomChatbot from "./chatbot/CustomChatbot";
+
 function App() {
   const [data, setData] = useState(["No Name"]);
   const dataNameRef = useRef();
@@ -29,15 +33,22 @@ function App() {
     setData([name]);
     dataNameRef.current.value = null;
   }
+  function botEventHandler() {}
 
   return (
     <>
       <Router>
         <div>
-          <NavBar />
-          <Route name="home" exact path="/" component={HomePage} />
+          <SignedOutLinks />
+          <Switch>
+            <Route name="home" exact path="/" component={HomePage} />
+            <Route name="products" path="/products" component={Products} />
+            <Route name="ceo" path="/ceo" component={Ceo} />
+            <Route name="staff" path="/staff" component={Staff} />
+          </Switch>
         </div>
       </Router>
+      <CustomChatbot eventHandler={botEventHandler} />
       <TestComponent passData={data} />
       <input ref={dataNameRef} type="text" defaultValue="Enter Name" />
       <button onClick={handleChangeName}>Submit Name</button>

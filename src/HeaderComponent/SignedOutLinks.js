@@ -1,21 +1,28 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavDropdown, Modal, Button } from "react-bootstrap";
+import { Switch, Route, Link } from "react-router-dom";
 import LoginPopUP from "./LoginPopUp";
 
 class SignedOutLinks extends Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Navbar.Brand href="/">Gogle</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Gogle
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#features">The vision</Nav.Link>
-            <Nav.Link href="/products">Products</Nav.Link>
+            <Nav.Link as={Link} to="/products">
+              Products
+            </Nav.Link>
             <NavDropdown title="Our Company" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/ceo">Meet the Ceo</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item as={Link} to="/ceo">
+                Meet the Ceo
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Staff">
+                Meet the management
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />

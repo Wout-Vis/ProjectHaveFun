@@ -20,7 +20,7 @@ class loginPopUP extends Component {
           Employee Login
         </Button>
         <Modal show={this.state.show} onHide={() => this.handleModal()}>
-          <Modal.Header closeButton>Login wiht your employee mail</Modal.Header>
+          <Modal.Header closeButton>Login with your employee mail</Modal.Header>
           <Modal.Body>
             <Form>
               <Form.Group controlId="formGroupEmail">

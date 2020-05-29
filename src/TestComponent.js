@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function TestComponent( { passData } ) {
-    return (
-        <div>
-            Hello {passData[0]}
-        </div>
-    )
+export default function TestComponent({ passData }) {
+  return <div>Hello {passData[0]}</div>;
 }
