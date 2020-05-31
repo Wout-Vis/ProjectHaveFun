@@ -8,6 +8,16 @@ For the tree we use some icons and symbols
 For chatbot use
  ### npm install react-simple-chatbot styled-components --save
 
+For bootstrap
+
+### npm install react-bootstrap bootstrap
+
+### npm install --save react-router
+
+### npm install -S react-router-bootstrap
+
+
+
 
 
 
