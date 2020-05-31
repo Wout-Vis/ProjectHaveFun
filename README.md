@@ -16,7 +16,7 @@ For bootstrap
 
 ### npm install -S react-router-bootstrap
 
-
+### npm install bootstra
 
 
 
