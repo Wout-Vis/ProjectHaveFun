@@ -18,7 +18,9 @@ For bootstrap
 
 ### npm install bootstrap
 
+### npm install jqu
 
+## npm install react-router-dom
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
