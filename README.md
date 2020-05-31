@@ -1,4 +1,4 @@
-For the tree we use some icons and symbols
+For the tree we use some icons and symbols, only when we end up using the file system!!!!
 
 ### npm install styled-components
 ### npm install react-icons
