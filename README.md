@@ -18,7 +18,7 @@ For bootstrap
 
 ### npm install bootstrap
 
-### npm install jqu
+### npm install jquery
 
 ## npm install react-router-dom
 
