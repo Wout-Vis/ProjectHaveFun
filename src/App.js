@@ -49,9 +49,6 @@ function App() {
         </div>
       </Router>
       <CustomChatbot eventHandler={botEventHandler} />
-      <TestComponent passData={data} />
-      <input ref={dataNameRef} type="text" defaultValue="Enter Name" />
-      <button onClick={handleChangeName}>Submit Name</button>
     </>
   );
 }
